@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>MODERN JS FEATURES = REST SPREAD TEMPLATE CLASS CONSTRUCTOR</title>
+</head>
+
+<body>
+    <h1>
+        MODERN JS FEATURES = REST SPREAD TEMPLATE CLASS CONSTRUCTOR
+    </h1>
+
+    <script>
+        class Employee {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            //THERE IS NO NEED TO USE THE FUNCTION KEYWORD WHILE USING WITHIN THE CLASS
+            display() {
+                document.write('<p>Name = ' + this.name + ', Age ' + this.age + '</p>');
+                //TEMPLATE STRINGS USING ${}
+                document.write(`<p>Name = ${this.name}  Age= ${this.age} </p>`);
+            }
+        }
+        //REST PARAMETER
+        function sum(a, ...b) {
+            document.write(`<p>a=${a} b=${b} </p>`);
+        }
+        let emp = new Employee("Raj", 35);
+        emp.display();
+
+        //CALLING REST PARAMETER
+        sum(20, 30, 40);
+
+        //SPREAD PARAMETER IS USED TO SPREAD MULTIPLE VALUEES OF AN ARRAY 
+        //TO MULIPLE PARAMETERS OF THE FUNCTION
+        let items = [20, 30, 40];
+        function test(test_array) {
+            for (i = 0; i < items.length; i++) {
+                document.write(items[i]);
+            }
+        }
+        test(items);
+        function test_spread(x,y, ...z) {
+            document.write(`<p>x = ${x} , y=${y} , z=${z}  </p>`);
+            sum =  x + y;
+            for (let i of z) {
+                sum = sum + i;
+
+            }
+            document.write(`<p>Total sum =  ${sum}</p>`);
+
+        }
+        let items_spread = [20, 30, 40, 50, 60, 70];
+        test_spread(...items);
+
+    </script>
+</body>
+
+</html>
