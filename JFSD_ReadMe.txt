@@ -7,6 +7,13 @@ Tanish College Stuff Prep.
 
 
 C:/Jaggi/Education/eBooks/simplilearn-weekend-oct25
+git pull origin master
+git status
+git log --oneline
+git add .
+git commit -m 'message'
+git push -u origin master
+git push -u origin <branchname>
 
 To delete the local remote-tracking branch that no longer exists remotely, use git fetch --prune or git fetch -p.
 To delete the local branch itself, you can use git branch -d <branch-name> or git branch -D <branch-name> to forcefully delete it. 
