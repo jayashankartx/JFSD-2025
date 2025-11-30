@@ -8,14 +8,15 @@
 <body>
     <h1>ARROW FUNCTIONS</h1>
     <script>
-        //ARROW FUNCTION => 
+        //ARROW FUNCTION => simplified form of anonymous also called callback functions in javascript
         let items = [10, 20, 30, 40, 50];
         items.forEach(function(ele, i) {
             document.write(`<p>Callback function Element = ${ele} Index = ${i} </p>`);
         }); 
 
 
-        //DIRECTLY USING THE PARAMETER
+        //DIRECTLY USING THE PARAMETER => followed by the body of the function. You can skip the flower brackets if the function has a single line
+        //function keyword is not used.
         items.forEach((ele,i)=> document.write(`<p>within arrow function Element = ${ele} Index = ${i} </p>`) ); 
         
     </script>

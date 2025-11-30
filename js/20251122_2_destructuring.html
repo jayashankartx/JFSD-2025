@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DESTRUCTURING DEMO</title>
 </head>
+
 <body>
     <h1>
         DESTRUCTURING DEMO
@@ -14,15 +16,16 @@
         //ARRAY DESTRUCTURING
         let response = [200, "success"];
         let [status, content] = response;
-        document.write( `<h2> status = ${status} content = ${content}`  );
+        document.write(`<h2> status = ${status} content = ${content}`);
         //OBJECT RESTRUCTURING
-        let emp = {id : 100, name : "Raj" , address : {state : "KA", city : "BLR"}};
+        let emp = { id: 100, name: "Raj", address: { state: "KA", city: "BLR" } };
 
-        let {id, name, address} = emp;
-        let {state, city} = address;
+        let { id, name, address } = emp;
+        let { state, city } = address;
 
-        document.write( `<p>Name=${name} , City=${city} </p>` );
+        document.write(`<p>Name=${name} , City=${city} </p>`);
 
     </script>
 </body>
+
 </html>

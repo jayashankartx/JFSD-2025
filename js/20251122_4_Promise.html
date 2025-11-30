@@ -12,11 +12,31 @@
     <h1>npm = node package manager, node.js = Run Time Environment</h1>
 
     <script>
+        let p = fetch('https://jsonplaceholder.typicode.com/users/1')
+            .then(response => response.json())
+        console.log(p);
+        p.then(c => console.log(c))
+        console.log("hello everyone");
+
+        /**
+         * Fetch url returns a response. The response has a JSON object
+         * Fetch results in asynchronous execution.
+         * Promise functions can be used to handle asynchronous execution using "then" when it is executed successfully
+         * And "catch" when there is failed execution.
+         * In JavaScript, a "Promise" is an object that represents the eventual completion 
+         * (or failure) of an asynchronous operation and its resulting value. 
+         * It acts as a placeholder for a value that might not be available immediately but will be at some point in the future. 
+         * In Angular, we have observables that are built on top of promise.
+        */
+
+
         let pr1 = fetch('https://jsonplaceholder.typicode.com/users/1')
 
-            .then(response => response.json())
+            .then(response => response.json()) //this is equivalen to function e(response) == function(response)
 
         console.log(pr1);
+        //asynchronous callback function executed when the backend process has completed successfgully.
+        //If failed, then catch() must be called
         pr1.then(c => console.log(c));
         console.log("Hello Everyone");
 
