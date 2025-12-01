@@ -1,0 +1,24 @@
+<p>directives-demo works!</p>
+<div>
+    <h2>ngFor and ngIf</h2>
+    <h3>List of names</h3>
+    <ol>
+        <li *ngFor = "let n of names"> {{n}} </li>
+    </ol>
+
+    <h3>List of users</h3>
+    <div *ngFor = "let u of users"> {{u.name}} your id is {{u.id}} </div>
+
+    <button (click) = "toggle()"> Toggle </button>
+    <p>Hello {{username}} </p>
+    <p *ngIf = "username"> Hello {{username}} </p>
+
+    <h2>ng Switch demo</h2>
+    <div [ngSwitch] = "option">
+        <p *ngSwitchCase="0">Coffee</p>
+        <p *ngSwitchCase="1">Tea</p>
+        <p *ngSwitchCase="2">Water</p>
+        <p *ngSwitchCase="3">Milk</p>
+        <p *ngSwitchDefault>Wrong Option</p>
+    </div>
+</div>

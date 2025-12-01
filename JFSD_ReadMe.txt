@@ -8,7 +8,10 @@ Non 30 2025
 ***********
 Page 101- Before the text - Creating the components - Date Nov 29 2025
 Page 115- Date Nov 30 2025
-
+Angular Directives. - ngFOr, ngSwitch and NgIF
+Component directive, Structural Directive and Attribute Directive.
+Pipe directives ng g p pipeName. Use the transform to add intelligence to the pipe.
+Angular pipes - Built in pipes and Custom Pipes.
 
 
 

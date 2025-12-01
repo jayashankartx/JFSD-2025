@@ -1,0 +1,22 @@
+<p>pipe-demo works!</p>
+<div>
+    <h2> Pipe Demo </h2>
+    <div>
+        <p>Name : {{employee.name | uppercase}} </p>
+        <p>Salary in INR: {{employee.salary | currency : 'INR'}} </p>
+        <p>Birthday in dd mm yyyy format : {{employee.birthday | date : 'MMM-dd-yyyy' }} </p>
+    </div>
+</div>
+
+<div>
+    <h2> Pipe and ngFor</h2>
+    <div>
+        <div *ngFor="let u of workers"> {{u.name}} your id is {{u.id}} with your birthday on {{u.birthday | date:
+            'MMM-dd-yyyy'}}
+            and your address is {{u.address.city | uppercase}} in state {{u.address.state}} and pincode
+            {{u.address.pin}}
+            
+        </div>
+    </div>
+    <p *ngFor="let u of users"> {{u.username | nameFormat : u.gender}} </p>
+</div>
