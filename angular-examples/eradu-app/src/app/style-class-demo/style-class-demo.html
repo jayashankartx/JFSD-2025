@@ -1,0 +1,17 @@
+<p>style-class-demo works!</p>
+
+<div>
+    <h2>NgStyle Binding</h2>
+    <div [ngStyle] = "myStyles">Lorem ipsum dolor sit amet.</div>
+
+    <div>
+        <a hre = '#' (click) = "changeStylesToGreen()">Green</a> <br/>
+        <a hre = '#' (click) = "changeStylesToRed()">Red</a> <br/>
+        <a hre = '#' (click) = "changeStylesToDefault()">Blue</a> <br/>
+    </div>
+
+    <h2>ngClass Binding</h2>
+    <div [ngClass] = "{'blueColor' : status}">Lorem ipsum dolor sit amet.</div>
+    <button (click) = "toggle()">Toggle</button>
+
+</div>

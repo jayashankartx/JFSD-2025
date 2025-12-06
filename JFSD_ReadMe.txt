@@ -4,6 +4,14 @@ Angular Tutorial.
 Resume - Raytheon.
 Tanish College Stuff Prep.
 
+Dec 06 2025
+***********
+Class and Style binding - ngStyle = used when I have to write my own local css within ts file.
+Adds or removes class [ngClass] = used when playing with css
+Working with external libraries like bootstrap
+Two decorators to help with communication between multiple components. @input and @output
+
+
 Non 30 2025
 ***********
 Page 101- Before the text - Creating the components - Date Nov 29 2025
