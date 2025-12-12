@@ -5,7 +5,7 @@
         <button (click) = "handleClick(tf.value)">Send!</button>
         <p>Msg1: {{message}} Msg2: {{message2}}</p>
     </div>
-    <div class="alert alert-primary">
+    <div class="alert alert-secondary"> 
         <app-child [parentMessage]="message" (childMessage)="message2=$event"></app-child>
     </div>
 </div>

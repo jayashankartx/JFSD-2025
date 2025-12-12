@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <h3 class="alert alert-primary w-25 text-center">Registration Form</h3>
+    <div class="w-25">
+        <form #user="ngForm" (ngSubmit)="handleForm(user.value)">
+            <h5>Enter Firstname</h5>
+            <input type="text" [(ngModel)]="firstname" name="fn" autocomplete="off" #first="ngModel" required
+                class="form-control form-control-lg">
+            <div *ngIf="!first.pristine && first.invalid" class="alert alert-danger">First name is required</div>
+            <h5>Enter Lastname</h5>
+            <input type="text" [(ngModel)]="lastname" name="ln" autocomplete="off" #last="ngModel" required
+                class="form-control form-control-lg">
+            <div *ngIf="!last.pristine && last.invalid" class="alert alert-danger">Last name is required</div>
+            <h5>Enter Phone</h5>
+            <input type="text" [(ngModel)]="phone" name="ph" autocomplete="off" #phNum="ngModel" required
+                class="form-control form-control-lg">
+            <div *ngIf="!phNum.pristine && phNum.invalid" class="alert alert-danger">Phone is required</div>
+            <h5>Select DOB</h5>
+            <input type="date" [(ngModel)]="dob" name="dob" autocomplete="off" required class="form-control form-control-lg">
+            <br />
+            <input type="submit" value="Register" [disabled]="user.invalid" class="btn btn-primary btn-lg w-100">
+        </form>
+    </div>
+    <hr />
+    <div>
+        <h4>Firstname ngmodel instance</h4>
+        <p> Value: {{first.value}}, Valid: {{first.valid}}, Pristine: {{first.pristine}} </p>
+    </div>
+
+    <div>
+        <h4>LastName ngmodel instance</h4>
+        <p> Value: {{last.value}}, Valid: {{last.valid}}, Pristine: {{last.pristine}} </p>
+    </div>
+
+    <div>
+        <h4>Phone ngmodel instance</h4>
+        <p> Value: {{phNum.value}}, Valid: {{phNum.valid}}, Pristine: {{phNum.pristine}} </p>
+    </div>
+
+    <div>
+        <h4>Firstname ngmodel instance</h4>
+        <p> Value: {{first.value}}, Valid: {{first.valid}}, Pristine: {{first.pristine}} </p>
+    </div>
+
+    <div>
+        <h4>NgForm Instance</h4>
+        <p>
+            <!-- java script object is created and the properties are bounded to ln and fn-->
+            {{user.value|json}}  Invalid: {{user.invalid}}
+        </p>
+
+    </div>
+</div>
