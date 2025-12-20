@@ -1,0 +1,11 @@
+<div class="w-25">
+    <form [formGroup]="registerForm" (ngSubmit)="handleRegister()">        
+        <input type="text" formControlName="firstname" placeholder="Enter username"
+            class='form-control form-control-lg'><br />
+        <input type="text" formControlName="lastname" placeholder="Enter lastname"
+            class='form-control form-control-lg'><br />
+            <input type="text" formControlName="phone" placeholder="Enter phone"
+            class='form-control form-control-lg'><br />
+        <input type="submit" value="Register" class='btn btn-primary btn-lg'>
+    </form>
+</div>

@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ProfileService } from '../profile-service';
 
 @Component({
   selector: 'app-mdf',
@@ -8,15 +9,20 @@ import { FormBuilder } from '@angular/forms';
   styleUrl: './mdf.css',
 })
 export class Mdf {
-  _builder = inject(FormBuilder);
+  _builder = inject(FormBuilder);//depedency injection to inject a builder that will compose a form.
+service = inject(ProfileService);//Dependency injection to inject a backend service.
+
   userForm = this._builder.group({
-    firstname: [''], lastname: [''], phone: ['']
+    firstname: ['', [Validators.required, Validators.minLength(3)]],//the properties are stores as an array
+    lastname: ['', [Validators.required, Validators.minLength(2)]],
+    phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/), Validators.minLength(10), Validators.maxLength(10)]] //^means that start with characters mentioned 0-9 and size is 10 end.
   });
 
-  handleForm(){
+  handleForm() {
     console.log(this.userForm.value);
+    this.service.save(this.userForm.value);
     this.userForm.reset({});
-    this.userForm.patchValue({lastname: 'JBS'});
+    this.userForm.patchValue({ lastname: 'JBS' });
   }
 
 }

@@ -1,8 +1,16 @@
-GIT tutorial
-App architecture
-Angular Tutorial.
-Resume - Raytheon.
-Tanish College Stuff Prep.
+Questions
+*********
+- when do we declare in app-module.ts
+
+
+
+Angular important syntax Keywords
+*********************************
+(ngSubmit)="handleForm() = to call function when the submit button in the form is selected.
+[formGroup]="userForm" = Aligns to the formBuilder = this._builder.group( in the module.ts file
+*ngIf="!userForm.controls['lastname'].pristine && userForm.controls['lastname'].invalid" = similar to if(form.firstname.nottouched) = Learn bootstrapped
+ng g s service-name
+ng new third-app --no-standalone
 
 
 Dec 08 2025
